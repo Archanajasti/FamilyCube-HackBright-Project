@@ -1,17 +1,30 @@
 {% extends "base.html" %}
 {% block content%}
-<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-<meta charset=utf-8 />
-<title>Videos</title>
-<style>
-  article, aside, figure, footer, header, hgroup, 
-  menu, nav, section { display: block; }
+<style type="text/css">
+label {
+    display: inline-block; 
+    width: 125px;
+}
 </style>
-</head>
-<body>
-    <h2>Videos</h2>
-    <input type='file' onchange="readURL(this);" />
-    <img id="blah" src="#" alt="your videos" />
+<title>Videos</title>
+<form action="/videos" method="POST">
+
+    <h1>Videos</h1>
+<p><h2>Add and view your Videos !!!!</h2></p>
+
+<p><h3><label>Add Video</label></h3></p>
+
+<form id="videolink" type=text name="Videolink">
+<p><div><label>Video Name:</label><input type="text" id="eventname" name="Videoname" required></div></p>
+    <p><div><label>Video Link:</label><input type="text" id="urlOutput" size="60" name="Videolink" required></div></p>
+    <p><input type="submit" value="Save"></p>
+</form>
+</form>
+
+<p><h3>Click here to view your memories !!</h3></p>
+<form action="/viewvideos">
+<p><div>
+    <input type="submit" value="View Videos">
+  </div></p>
+</form>
 {% endblock %}

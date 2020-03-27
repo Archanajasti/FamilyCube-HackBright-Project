@@ -8,11 +8,30 @@
       }
       label{ 
         display: inline-block; 
-        width: 75px; 
+        width: 125px; 
         
 </style>
-  <body>
-  <h2>Events</h2>
+<div id="right"><event style="font-size:24px"><h2>Events  </h2><i class="fa fa-calendar"></i></event></div>
+
+
+<form action="/events" method="POST">
+
+    <p><div><label>Event Type:</label>
+        <select name="event_type">
+        <option value=""></option>
+        <option value="Birthday">Birthday</option>
+        <option value="Marriage_Anniversary">Marriage Anniversary</option>
+        <option value="Other">Other</option>
+        </select>
+        <div></p>
+    <div><label>Event Date:</label><input type="date" id="event_date" name="event_date"></div>
+    <div><label>Event Details:</label><input type="text" id="event_text" name="event_text" required></div>
+    <div><label>Event Location:</label><input type="text" id="event_location" name="event_location" required></div>
+    <p><div>
+      <input type="submit" value="Submit">
+    </div></p>
+
+  <p><h2>All Events</h2></p>
   {% if events %}
   
     {% for event in events %}

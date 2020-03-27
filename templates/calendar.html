@@ -1,33 +1,8 @@
 {% extends "base.html" %}
 {% block content%}
-<style>
-
-    div{ 
-        margin-bottom:5px; 
-    }
-      label{ 
-        display:inline-block; 
-        width:105px;
-        } 
-        
-</style>
-  <h1>Calendar</h1>
   
-
-  <form action="/calendar" method="POST">
-
-    <p><div><label>Event Type:</label>
-        <select name="event_type">
-        <option value=""></option>
-        <option value="Birthday">Birthday</option>
-        <option value="Marriage_Anniversary">Marriage Anniversary</option>
-        </select>
-        <div></p>
-    <div><label>Event Date:</label><input type="date" id="event_date" name="event_date"></div>
-    <div><label>Event Details:</label><input type="text" id="event_text" name="event_text" required></div>
-    <p><div>
-      <input type="submit" value="Submit">
-    </div></p>
-
-  </form>
+<h1>Calendar</h1>
+  
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=ZmFtaWx5Y3ViZTIwMjBAZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%230B8043&amp;showCalendars=1" style="border:solid 1px #777" width="900" height="600" frameborder="0" scrolling="no"></iframe>
+  
 {% endblock %}

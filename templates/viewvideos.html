@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content%}
+<title>View Videos</title>
+
+<h1>Video Gallery</h1>
+{% if videos %}
+  
+    {% for video in videos %}
+    <ul>
+      <li>{{ video.album_name }}</li>
+      <a href="{{ video.image }}">Video</a>
+  </ul>
+   {% endfor %}
+  {% endif %}
+
+
+{% endblock %}

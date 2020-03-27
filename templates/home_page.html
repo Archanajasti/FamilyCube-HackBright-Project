@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style type="text/css">
   .container {
   display: table;
@@ -17,10 +18,9 @@
 }
 </style>
 <div class="container">
-  <h1>Welcome to FamilyCube!!!</h1>
+  <h1>Welcome, {{first_name}}!!!</h1>
   <div id="right" >
-   <i f073 class="fa fa-calendar-o" aria-hidden="true"></i>
-      <h2>Events</h2>
+    <event style="font-size:24px">Events   <i class="fa fa-calendar"></i></event>
      {% if events %}
   
     {% for event in events %}
@@ -33,7 +33,7 @@
   {% endif %}
   </div>
 <div id="left" >
-    <img width="500" height="333">
+    <img src=static/LiliaAlvaradoPhotography_SpringWarmth.jpg width="600" height="444">
   </div>
 
 </div>

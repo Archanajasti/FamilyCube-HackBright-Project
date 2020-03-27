@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content%}
+<title>View Photos</title>
+
+<h1>Photo Gallery</h1>
+{% if images %}
+  
+    {% for image in images %}
+    <ul>
+      <li>{{ image.album_name }}</li>
+      <a href="{{ image.image }}">Image</a>
+  </ul>
+   {% endfor %}
+  {% endif %}
+
+
+{% endblock %}

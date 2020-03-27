@@ -31,10 +31,9 @@ class User(db.Model):
     def __repr__(self):
         """Return a user-readable representation of a User."""
 
-        return f"<User user_id={self.user_id} email={self.email} password={self.password}>"
+        return f"<User user_id={self.user_id} first_name={self.first_name} last_name={self.last_name} email={self.email} password={self.password}>"
 
         
-
 
 class Profile(db.Model):
     """Data model for profile."""
@@ -68,14 +67,15 @@ class Profile(db.Model):
     def __repr__(self):
         """Return a profile-readable representation of a profile."""
 
-        return f"<Profile profile_id={self.profile_id} user_id={self.user_id} display_name={self.display_name}>"
+        return f"<Profile profile_id={self.profile_id} user_id={self.user_id} display_name={self.display_name} married={self.married} kids={self.kids}>"
+
+    
 
     def fullname(self):
         """Return a member full name."""
 
         return f"{self.users.first_name} {self.users.last_name}"
-
-
+    
 class Member(db.Model):
 
     """Data model for members in the family."""
@@ -105,12 +105,7 @@ class Member(db.Model):
 
         return f"<Member member_id={self.member_id} profile_id={self.profile_id} first_name={self.first_name} last_name={self.last_name} date_of_birth={self.date_of_birth} phonenumber={self.phonenumber} email={self.email}>"
 
-    def fullname(self):
-        """Return a member full name."""
-
-        return f"{self.first_name} {self.last_name}"
-
-
+        
 class Event(db.Model):
 
     """Data model for events in the family."""
@@ -145,6 +140,7 @@ class Image(db.Model):
     profile_id = db.Column(db.Integer,db.ForeignKey('profiles.profile_id'))
     event_id = db.Column(db.Integer,db.ForeignKey('events.event_id'))
     image = db.Column(db.String)
+    image_type = db.Column(db.String)
     file_name = db.Column(db.String)
     album_name = db.Column(db.String(30),nullable=True,)
     
@@ -170,8 +166,6 @@ class Relationship(db.Model):
     profile1_id = db.Column(db.Integer,db.ForeignKey('profiles.profile_id'))
     profile2_id = db.Column(db.Integer,db.ForeignKey('profiles.profile_id'))
     member_relation = db.Column(db.String(25),nullable=True,)
-
-    #members = db.relationship("Member", backref="realationships")
     profile1 = db.relationship("Profile", foreign_keys=[profile1_id])
     profile2 = db.relationship("Profile", foreign_keys=[profile2_id])
 

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+      div{ 
+        margin-bottom:5px; 
+      }
+      label{ 
+        display: inline-block; 
+        width: 105px;
+
+</style>
+<body>
+
+    <form action="/member" method="POST">
+        
+    <section class="member_profile">
+      <div class="memeber_profile-info">
+
+<section class="member-info">
+    <p><div>
+      <h2 class="family header">Member Info</h2>
+        <div><label>First Name:</label><input type="text" id = "Member_Firstname" name="Member_Firstname" required></div>
+        <div><label>Last Name:</label><input type="text" name="Member_Lastname" required></div>
+        <div><label>Email:</label><input type="text" name="Member_Email" required></div>
+        <div><label>Phone Number:</label><input type="tel" id="phone" name="Member_Phonenumber"></div>
+        <div><label>Date of Birth:</label><input type="date" id="birthday" name="Member_Birthday"></div>
+        <p><div><label>Married:</label>
+        <select name="Marital_Status">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        </select>
+        <div></p>
+        <div><label for="marriage anniversary">Married on:</label><input type="date" id="anniversary" name="Member_Marriage_Anniversary"></div>
+        <p><div><label>Relationship:</label>
+        <select name="Member_Relation">
+        <option value=""></option>
+        <option value="Spouse">Spouse</option>
+        <option value="Daughter">Daughter</option>
+        <option value="Son">Son</option>
+        <option value="Sister">Sister</option>
+        <option value="Brother">Brother</option>
+        <option value="Mother">Mother</option>
+        <option value="Father">Father</option>
+        <option value="Other">Other</option>
+        </select>
+        <div></p>
+
+    <p><div><input type="submit" value="Submit"></form></div></p>
+
+{% endblock %}
