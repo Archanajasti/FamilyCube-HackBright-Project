@@ -63,29 +63,25 @@ def login_form():
     return render_template("login_form.html")
 
 
-@app.route('/login', methods=['POST'])
-def login_process():
-#     """Process login."""
+
+@app.route('/validatelogin', methods=['POST'])
+def validate_login():
+#     """Validate login."""
 
 #     # Get form variables
     email = request.form.get("email")
     password = request.form.get("password")
-    print(email,password)
-
     user = User.query.filter_by(email=email).first()
-    print(user)
-    if not user:
-        flash("No such user")
-        return redirect("/login")
+    if user is not None and user.password == password:
+        session["user_id"] = user.user_id
+        session["first_name"] = user.first_name
+        response = ''
+    else:
+        response = 'Invalid userid and password combination'
 
-    if user.password != password:
-        flash("Incorrect password")
-        return redirect("/login")
+    return response
 
-    session["user_id"] = user.user_id
-    session["first_name"] = user.first_name
-    flash("Logged in")
-    return redirect("/homepage")
+
 
 @app.route('/homepage')
 def homepage():
@@ -312,7 +308,6 @@ def logout():
     """Log out."""
     if session["user_id"] is not None:
         del session["user_id"]
-        flash("Logged Out.")
     return redirect("/")
 
 
@@ -339,11 +334,11 @@ if __name__ == "__main__":
     # that we invoke the DebugToolbarExtension
 
     # Do not debug for demo
-    app.debug = True
+    app.debug = False
 
     connect_to_db(app)
 
     # Use the DebugToolbar
-    DebugToolbarExtension(app)
+    # DebugToolbarExtension(app)
 
     app.run(host="0.0.0.0")

@@ -2,6 +2,24 @@
 <html>
 <head>
     <title>Login</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+  function validate(){
+
+    let pwd = document.getElementById("pwdInput").value;
+    if(pwd.length < 6) {
+      document.getElementById("pwdValidation").innerHTML = " Password must be atleast 6 characters long";
+      document.getElementById("loginsubmit").disabled = true;
+    }
+    else{
+      document.getElementById("pwdValidation").innerHTML = ""
+      document.getElementById("loginsubmit").disabled = false;
+    };
+
+
+  }
+
+</script>
 </head>
 <style>
   body{
@@ -19,22 +37,28 @@
       label{ 
         display: inline-block; 
         width: 75px; 
+      }
+      label.test{ 
+        display: inline; 
+        width: 250px; 
+      }
         
 </style>
   <h1>Login</h1>
   
 
-  <form action="/login" method="POST">
+  <form action="/" id="login-form">
 
-    <div><label>Email:<input type="email" name="email" required></label></div>
+    <div><label>Email:</label><input type="email" name="email" id="emailInput" required></div>
 
-    <div><label>Password:<input type="password" name="password" required></label></div>
+    <div><label>Password:</label><input type="password" name="password" onchange="validate()" id="pwdInput" required><label id="pwdValidation" class="test"></label></div>
 
     <p><div>
-      <input type="submit" value="Log In">
+      <input type="submit" id="loginsubmit" value="Log In"><label id="accountValidation" class="test"></label>
     </div></p>
 
   </form>
+<script src="/static/family.js"></script>
 </body>
 </html>
 
