@@ -163,6 +163,14 @@ def add_member():
 
     return render_template("member.html")
 
+@app.route('/member_display')
+def member_view():
+    """Member display"""
+    
+    userid = session.get("user_id")
+    if userid is not None:
+        members = db.session.query(Member).join(Profile).filter(Profile.user_id==userid).all()
+        return render_template("member_display.html",members=members)
 
 @app.route('/member',methods=['POST'])
 def member_update():

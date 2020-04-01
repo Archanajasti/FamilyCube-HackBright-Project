@@ -36,12 +36,21 @@ label {
   
 </form>
 
-<p><div><h3>Click below to add members</h3></div></p>
-
+<p><div><h3>Click below to add/view members</h3></div></p>
+<table>
+    <tr>
+        <td>
 <form action='/member'>
 <p><div><input type="submit" value="Add Member"></div></p>
 </form>
-
+</td>
+<td>
+    <form action='/member_display'>
+<p><div><input type="submit" value="View Members"></div></p>
+</form>
+</td>
+</tr>
+</table>
 
 
 {% endblock %}

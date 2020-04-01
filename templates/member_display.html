@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style type="text/css">
+label {
+    display: inline-block; 
+    width: 125px;
+}
+</style>
+<title>profile_page</title>
+<form>
+    <h2>Family Members</h2>
+    {% if members %}
+  
+    {% for member in members %}
+    <section class="profile">
+      <div class="container">
+        <div><label>First Name: </label><label>{{member.first_name}}</label></div>
+        <div><label>Last Name: </label><label>{{member.last_name}}</label></div>
+        <div><label>Email: </label><label>{{member.email}}</label></div>
+        <div><label>Phone Number: </label><label>{{member.phonenumber}}</label></div>
+        <div><label>Date of Birth:</label><label>{{member.date_of_birth}}</label></div>
+        <div><label>Relation: </label><label>{{member.relation}}</label></div>
+        {% if member.marriage_date %}
+        <div><label>Married on: </label><label>{{member.marriage_date}}</label></div>
+        {% endif %}
+        <br>
+        <br>
+        <br>
+
+
+</div>
+</section>
+   {% endfor %}
+  {% endif %}
+</form>
+
+<p><div><h3>Click below to add members</h3></div></p>
+
+<form action='/member'>
+<p><div><input type="submit" value="Add Member"></div></p>
+</form>
+
+
+
+{% endblock %}
