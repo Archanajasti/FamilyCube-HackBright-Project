@@ -3,11 +3,9 @@ An application where family can connect view and share thier pictures and events
 
 Features:
 
-Family Profile - willhave all the details of thier family
+An application where family can connect view and share their pictures and celebrate events.
 
-Events - add events and check for upcoming events to wish your dear ones.
-
-Memoreis - where albums and video linka can be added for viewing.
+Features-Family Profile - will have all the details of their family.Events - add events and check for upcoming events to wish your dear ones.Photos & Videos - where albums and video link can be added for viewing.
 
 Planning:
 
