@@ -3,9 +3,7 @@ An application where family can connect view and share thier pictures and events
 
 Features:
 
-An application where family can connect view and share their pictures and celebrate events.
-
-Features-Family Profile - will have all the details of their family.Events - add events and check for upcoming events to wish your dear ones.Photos & Videos - where albums and video link can be added for viewing.
+Family Profile - will have all the details of their family. Events - add events and check for upcoming events to wish your dear ones. Photos & Videos - where albums and video link can be added for viewing.
 
 Planning:
 
@@ -20,6 +18,8 @@ https://drive.google.com/file/d/1Q7RVMImBJNr6ymCyhMEUo9c50h3vCQUD/view?usp=shari
 https://drive.google.com/file/d/1f3LC37PV8bIWBEcn7LcMhHwSIGqyv12z/view?usp=sharing
 
 Technologies: Python Flask Jinja2 PostgreSQL SQLAlchemy ORM HTML CSS JavaScript JQuery AJAX
+
+Application Demo:
 
 
 # Index page
