@@ -2,12 +2,13 @@
 
 from jinja2 import StrictUndefined
 
-from flask import Flask, render_template, request, flash, redirect, session
+from flask import Flask, render_template, request, flash, redirect, session, url_for
 from flask_debugtoolbar import DebugToolbarExtension
 
 from model import connect_to_db, db, User,Profile,Member,Event,Image
 from datetime import datetime
 from sqlalchemy import extract
+import os
 
 app = Flask(__name__)
 
@@ -88,6 +89,8 @@ def homepage():
 
     first_name = session["first_name"]
     first3_events = latest_events()
+    app.logger.info(os.path.join(os.environ['HOME'], 'static'))
+    app.logger.info(os.path.dirname(app.instance_path))
     return render_template("home_page.html",first_name=first_name, events=first3_events)
 
 @app.route('/profile')
