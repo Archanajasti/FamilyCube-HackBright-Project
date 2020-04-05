@@ -19,7 +19,7 @@ https://drive.google.com/file/d/1f3LC37PV8bIWBEcn7LcMhHwSIGqyv12z/view?usp=shari
 
 Technologies: Python Flask Jinja2 PostgreSQL SQLAlchemy ORM HTML CSS JavaScript JQuery AJAX
 
-Application Demo:
+# Application Demo:
 
 
 # Index page
