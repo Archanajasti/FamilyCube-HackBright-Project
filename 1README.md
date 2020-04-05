@@ -21,6 +21,7 @@ https://drive.google.com/file/d/1f3LC37PV8bIWBEcn7LcMhHwSIGqyv12z/view?usp=shari
 
 
 #Index page
+![alt text](https://github.com/Archanajasti/FamilyCube-HackBright-Project/blob/master/static/Index%20Page.PNG)
 
-![alt tag] (https://github.com/Archanajasti/FamilyCube-HackBright-Project/blob/master/static/Index%20Page.PNG)
+
 
