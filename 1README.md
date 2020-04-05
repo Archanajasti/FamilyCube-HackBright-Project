@@ -47,7 +47,7 @@ Technologies: Python Flask Jinja2 PostgreSQL SQLAlchemy ORM HTML CSS JavaScript 
 ![alt text](https://github.com/Archanajasti/FamilyCube-HackBright-Project/blob/master/static/Add%20Videos.PNG)
 
 # Add Events
-![alt text]https://github.com/Archanajasti/FamilyCube-HackBright-Project/blob/master/static/Add%20Events.PNG
+![alt text](https://github.com/Archanajasti/FamilyCube-HackBright-Project/blob/master/static/Add%20Events.PNG)
 
 
 
