@@ -20,5 +20,7 @@ https://drive.google.com/file/d/1Q7RVMImBJNr6ymCyhMEUo9c50h3vCQUD/view?usp=shari
 https://drive.google.com/file/d/1f3LC37PV8bIWBEcn7LcMhHwSIGqyv12z/view?usp=sharing
 
 
-Index page
-![alt text]https://github.com/Archanajasti/FamilyCube-HackBright-Project/blob/master/static/Index%20Page.PNG
+#Index page
+
+![alt text] (https://github.com/Archanajasti/FamilyCube-HackBright-Project/blob/master/static/Index%20Page.PNG)
+
